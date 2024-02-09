@@ -1,0 +1,46 @@
+<style>
+    .ul.navbar-nav me-auto mb-2 mb-md-0 li
+    {
+        display:inline-block;
+        margin-right:100px;
+    }
+
+</style>
+<div th:fragment="user_nav">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Личный кабинет</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 ml-5">
+                    <li class="nav-item me-5">
+                        <a class="nav-link " aria-current="page" href="/user_details">Личные данные</a>
+                    </li>
+
+                    <li class="nav-item me-5" >
+                        <a class="nav-link" href="/catalog">Каталог</a>
+                    </li>
+
+
+                    <li class="nav-item me-5">
+
+                        <a class="nav-link" href="/cart" > <i class="fa fa-shopping-cart " style="font-size:30px;color:grey"></i></a>
+                    </li>
+
+                    <li class="nav-item me-5">
+                        <form class="d-flex mt-3 mt-lg-0 " action="/catalog/search" method="get" role="search">
+                            <input class="form-control -lg me-2" type="search" name="keyword" size="100" placeholder="Поиск товара" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Найти</button>
+                        </form>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="/orders">Мои заказы</a>
+                    </li>
+                </ul>
+                <a href="/logout"  ><input  class="btn btn-warning" value="Выйти"> </input></a>
+            </div>
+        </div>
+    </nav>
+</div>
